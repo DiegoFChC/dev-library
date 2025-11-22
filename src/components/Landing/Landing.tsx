@@ -10,7 +10,7 @@ export function Landing(): JSX.Element {
       <section className='mainTitle'>
         <div className='background'></div>
         <h1>
-          <strong>./ Dev Library Template</strong>
+          <strong>./ Dev Library</strong>
         </h1>
         <p>
           Recopilación personal de <span>notas</span>, <span>cheatsheets</span> y <span>ejemplos prácticos</span> sobre lenguajes de programación, frameworks y herramientas.

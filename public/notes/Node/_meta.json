@@ -1,0 +1,14 @@
+{
+  "general": {
+    "order": 1,
+    "title": "Introducción"
+  },
+  "modules": {
+    "order": 3,
+    "title": "Módulos nativos"
+  },
+  "global-objects": {
+    "title": "Objetos globales",
+    "order": 2
+  }
+}

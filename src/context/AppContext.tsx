@@ -23,7 +23,7 @@ export function useAppContext(): AppContextValue {
   const context = useContext(AppContext)
 
   if (context === undefined) {
-    throw new Error('useAppContext must be used within a ThemeProvider')
+    throw new Error('useAppContext must be used within a AppContext')
   }
 
   return context

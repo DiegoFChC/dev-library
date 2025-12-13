@@ -1,10 +1,10 @@
 ---
 title: EL DOM en JavaScript
-description: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+description: Aprendiendo acerca del DOM
 order: 1
 ---
 
-# DOM: Document Object Model
+## DOM: Document Object Model
 
 El DOM es un puente entre HTML y JavaScript, es una *API* para HTML. Es una forma de representar el docuemnto **HTML** por medio de un árbol de objetos. Permite interactuar con el docuemnto HTML por medio de JavaScript.
 
@@ -14,7 +14,7 @@ Este tipo de representación facilita la navegación sobre el documento.
 
 > **API:** (Application Programming Interface - Interfaz de Programamción de Aplicaciones) Es un conjunto de reglas y protocolos que permiten la comunicación entre dos apliaciones.
 
-## Document
+### Document
 
 Padre de todos los elementos del DOM (objeto raíz). Llamado el Nodo raíz. A continuación vemos una imagen representativa del DOM:
 

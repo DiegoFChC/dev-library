@@ -1,14 +1,18 @@
 {
   "general": {
-    "order": 1,
-    "title": "Introducción"
+    "title": "Introducción",
+    "order": 1
   },
   "modules": {
-    "order": 3,
-    "title": "Módulos nativos"
+    "title": "Módulos nativos",
+    "order": 3
   },
   "global-objects": {
     "title": "Objetos globales",
     "order": 2
+  },
+  "http": {
+    "title": "HTTP",
+    "order": 4
   }
 }

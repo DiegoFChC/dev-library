@@ -29,5 +29,17 @@ export const topics: Topic[] = [
     topic: 'Java',
     img: '/logos/java.png',
     mainFolder: 'introduction'
+  },
+  {
+    name: 'MongoDB',
+    topic: 'mongodb',
+    img: '/logos/mongodb.png',
+    mainFolder: 'general'
+  },
+  {
+    name: 'PostgreSQL',
+    topic: 'postgresql',
+    img: '/logos/postgresql.png',
+    mainFolder: 'general'
   }
 ]

@@ -47,4 +47,13 @@ Algunos ejemplo de middlewares que podríamos tener en Node JS (puro) son:
 * `urlParser` parsear la url para obtener datos como: url, method, contentType, searchParams, etc.
 * `validUUID` validar si un id es correcto.
 
+```javascript
+// Ejemplo de ejecución de middlewares en enrutado
+if (method === 'PUT' && userId) {
+  return validUUIDMiddleware(req, res, () =>
+    bodyParser(req, res, () => putUser(req, res, userId))
+  )
+}
+```
+
 > Proyecto asociado al capítulo de HTTP para comprender mejor los conceptos: [Github](https://github.com/DiegoFChC/Node-JS-mini-projects/tree/main/4-users-api-rest)

@@ -87,4 +87,4 @@ Estos **query params** siempre llegan como `strings`, por lo que en algunos caso
 
 Como te puedes dar cuenta, al igual que con el enrutado dinámico, se debe preprocesar la URL para obtener dichos valores.
 
-> Con el fin de entender como hacer esto a profundidad, puedes ver el sigueinte proyecto con las implementaciones: [github](url).
+> Proyecto asociado al capítulo de HTTP para comprender mejor los conceptos: [Github](https://github.com/DiegoFChC/Node-JS-mini-projects/tree/main/4-users-api-rest)

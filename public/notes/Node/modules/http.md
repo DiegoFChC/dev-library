@@ -54,3 +54,4 @@ console.log('Servidor escuchando en el puerto 3000')
 ```
 
 > Dado lo extenso de ete capítulo, se ha decidido dedicar una sección completa al módulo de evento. A continuación puedes dirigirte a la sección [http](https://dev-library-diferdev.vercel.app/notes/Node/http/req-res)
+> También puedes encontrar un servidor básico creado sólo con Node puro: [Github](https://github.com/DiegoFChC/Node-JS-mini-projects/tree/main/4-users-api-rest)

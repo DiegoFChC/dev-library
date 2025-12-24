@@ -47,3 +47,5 @@ Entre las familias más importantes tenemos:
 | `503 Service Unavailable`   | Servicio caído     |
 
 > Puedes encontrar más acerca de los `status code` en [mdn](https://developer.mozilla.org/es/docs/Web/HTTP/Reference/Status), [HTTP cats](https://http.cat/)
+
+> Proyecto asociado al capítulo de HTTP para comprender mejor los conceptos: [Github](https://github.com/DiegoFChC/Node-JS-mini-projects/tree/main/4-users-api-rest)

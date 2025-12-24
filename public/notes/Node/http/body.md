@@ -22,3 +22,5 @@ En Node.js el body **NO** llega completo, llega como un **stream**.
   * `error`: Se dispara si hay un problema al intentar escribir en la respuesta.
 
 > El tipo del body depende del `Content-Type` especificado en los `headers`.
+
+> Proyecto asociado al capítulo de HTTP para comprender mejor los conceptos: [Github](https://github.com/DiegoFChC/Node-JS-mini-projects/tree/main/4-users-api-rest)

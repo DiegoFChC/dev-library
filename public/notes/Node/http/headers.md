@@ -102,3 +102,5 @@ Controla caché:
 5. Set-Cookie
 
 Enviar cookies al cliente.
+
+> Proyecto asociado al capítulo de HTTP para comprender mejor los conceptos: [Github](https://github.com/DiegoFChC/Node-JS-mini-projects/tree/main/4-users-api-rest)

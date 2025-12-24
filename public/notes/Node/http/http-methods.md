@@ -69,3 +69,5 @@ Muy usado en:
 
 * CORS
 * navegadores
+
+> Proyecto asociado al capítulo de HTTP para comprender mejor los conceptos: [Github](https://github.com/DiegoFChC/Node-JS-mini-projects/tree/main/4-users-api-rest)

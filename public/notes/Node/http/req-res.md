@@ -113,3 +113,5 @@ Mentalmente, el flujo es el siguiente:
 6. Configuras headers / status
 7. Llamas a res.end()
 8. Conexión cerrada
+
+> Proyecto asociado al capítulo de HTTP para comprender mejor los conceptos: [Github](https://github.com/DiegoFChC/Node-JS-mini-projects/tree/main/4-users-api-rest)

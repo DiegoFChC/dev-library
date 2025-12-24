@@ -13,7 +13,7 @@ Los **headers** son metadatos que viajan a la `request` y la `response`. Hacen r
 req.headers
 ```
 
-1. Content-Type
+#### Content-Type
 
 Indica qué tipo de datos viene en el body.
 
@@ -28,7 +28,7 @@ Ejemplos:
 
 👉 Sin este header, el servidor no sabe cómo interpretar el body.
 
-2. Content-Length
+#### Content-Length (request)
 
 Tamaño del body en bytes.
 
@@ -37,7 +37,7 @@ Node lo usa para:
 * saber cuándo termina el stream
 * validar uploads
 
-3. Authorization
+#### Authorization
 
 Usado para autenticación.
 
@@ -46,7 +46,7 @@ Ejemplos:
 * Bearer token
 * Basic base64
 
-4. Accept
+#### Accept
 
 Indica qué tipo de respuesta espera el cliente.
 
@@ -55,7 +55,7 @@ Ejemplo:
 * application/json
 * text/html
 
-5. User-Agent
+#### User-Agent
 
 Identifica el cliente:
 
@@ -70,7 +70,7 @@ Identifica el cliente:
 res.setHeader(name, value)
 ```
 
-1. Content-Type (el más importante)
+#### Content-Type (el más importante)
 
 Define cómo el cliente debe interpretar el body.
 
@@ -82,25 +82,32 @@ Ejemplos:
 
 👉 Si envías JSON sin este header, el cliente puede interpretarlo mal.
 
-2. Content-Length
+#### Content-Length (response)
 
 Tamaño de la respuesta.
 
 Node puede calcularlo automáticamente, pero no siempre.
 
-3. Location
+#### Location
 
 Usado en redirecciones (3xx).
 
-4. Cache-Control
+#### Cache-Control
 
 Controla caché:
 
 * no-cache
 * max-age=3600
 
-5. Set-Cookie
+#### Set-Cookie
 
 Enviar cookies al cliente.
+
+```javascript
+// Ejemplo de validación de headers
+if (!req.contentType?.includes('application/json')) {
+  return unsupportedMedia(res)
+}
+```
 
 > Proyecto asociado al capítulo de HTTP para comprender mejor los conceptos: [Github](https://github.com/DiegoFChC/Node-JS-mini-projects/tree/main/4-users-api-rest)

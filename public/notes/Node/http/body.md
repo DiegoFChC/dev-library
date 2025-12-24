@@ -21,6 +21,36 @@ En Node.js el body **NO** llega completo, llega como un **stream**.
   * `close`: Se emite cuando la conexión se ha cerrado (por el servidor o por el cliente de forma inesperada).
   * `error`: Se dispara si hay un problema al intentar escribir en la respuesta.
 
+```javascript
+// Ejemplo de implementación con promesas
+
+function bodyParser(req, res) {
+  return new Promise((resolve, reject) => {
+    let totalData = ''
+    req
+      .on('data', (chunk) => {
+        totalData += chunk.toString()
+      })
+      .on('end', () => {
+        if (totalData.length === 0) {
+          return reject(new Error('Data not received'));
+        }
+        try {
+          req.body = JSON.parse(totalData);
+          resolve();
+        } catch (err) {
+          reject(new Error('Invalid JSON format'));
+        }
+      })
+      .on('error', (err) => {
+        reject(err)
+      })
+  })
+}
+
+module.exports = { bodyParser }
+```
+
 > El tipo del body depende del `Content-Type` especificado en los `headers`.
 
 > Proyecto asociado al capítulo de HTTP para comprender mejor los conceptos: [Github](https://github.com/DiegoFChC/Node-JS-mini-projects/tree/main/4-users-api-rest)

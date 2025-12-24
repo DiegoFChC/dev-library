@@ -8,7 +8,7 @@ export function saveTheme (theme : Theme): void {
 }
 
 export function getCurrentTheme () : Theme {
-  if (typeof window === 'undefined') return 'light'
+  if (typeof window === 'undefined') return 'dark'
   const currentTheme = localStorage.getItem('theme') as Theme | null
   return currentTheme ?? getSystemTheme()
 }

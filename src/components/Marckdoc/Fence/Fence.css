@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&display=swap');
+
 .Fence {
   margin: 20px 0;
   padding: 10px;
@@ -9,7 +11,12 @@
 }
 
 .Fence > pre {
-  font-size: .8rem;
+  font-size: 0.8rem;
+}
+
+.Fence code span {
+  font-family: 'Cascadia Code', Consolas, 'Courier New', monospace !important;
+  font-weight: 400;
 }
 
 .Fence .copy {
@@ -21,7 +28,7 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: transform .3s ease;
+  transition: transform 0.3s ease;
   position: absolute;
   top: 5px;
   right: 5px;
@@ -30,4 +37,19 @@
 .Fence .copy:hover {
   transform: scale(1.1);
   background: rgba(255, 255, 255, 0.075);
+}
+
+pre::-webkit-scrollbar {
+  width: 8px;
+  height: 7px;
+}
+pre::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+pre::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+pre::-webkit-scrollbar-thumb:hover {
+  background: #475569;
 }

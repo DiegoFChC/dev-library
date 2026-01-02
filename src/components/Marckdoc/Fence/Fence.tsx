@@ -31,7 +31,7 @@ export function Fence({ language, content }: FenceProps): JSX.Element {
       <SyntaxHighlighter
         language={language}
         style={atomOneDark}
-        customStyle={{ background: 'transparent' }}
+        customStyle={{ background: 'transparent', fontFamily: 'monospace' }}
         wrapLongLines
       >
         {content}

@@ -14,5 +14,9 @@
   "http": {
     "title": "HTTP",
     "order": 4
+  },
+  "auth": {
+    "title": "Auth",
+    "order": 5
   }
 }

@@ -12,7 +12,7 @@ Este tipo de representación facilita la navegación sobre el documento.
 
 > Cada elemento del DOM es llamado **NODO**.
 
-> **API:** (Application Programming Interface - Interfaz de Programamción de Aplicaciones) Es un conjunto de reglas y protocolos que permiten la comunicación entre dos apliaciones.
+> **API:** (Application Programming Interface - Interfaz de Programamción de Aplicaciones) Es un conjunto de reglas y protocolos que permiten la comunicación entre dos aplicaciones.
 
 ### Document
 

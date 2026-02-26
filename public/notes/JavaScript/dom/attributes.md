@@ -60,3 +60,5 @@ const user = document.getElementById('user')
 
 console.log(user.dataset.userId) // -> 123
 ```
+
+> Podemos seguir accediendo a este tipo de atributos con `getAttribute(name)`

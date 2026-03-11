@@ -8,11 +8,11 @@ oreder: 1
 
 A continuación veremos los comandos más importantes a la hora de usar gestionar bases de datos en _postgeSQL_.
 
-* Para crear una base de datos usamos el comando `CREATE DATABASE <name>;`. Tambien tenemos otras opciones que complementan este comando, las cuales permiten especificar otros datos acerca de nuestra base de datos, algnos son:
+* Para crear una base de datos usamos el comando `CREATE DATABASE <name>;`. Tambien tenemos otras opciones que complementan este comando, las cuales permiten especificar otros datos acerca de nuestra base de datos, algunos son:
   * `OWNER` Define que usuario es dueño de la base de datos.
   * `ENCODING` Codificación de la base de datos. Se recomienda `UTF8`.
   * `LC_COLLATE` Controla cómo se ordenan los textos.
-  * `LC_CTYPE` COntrola cómo se comparan letras. **No se puede cambiar una vez definida**.
+  * `LC_CTYPE` Controla cómo se comparan letras. **No se puede cambiar una vez definida**.
   * `TEMPLATE` Si queremos usar una base de datos como plantilla.
 
 ```sql
@@ -68,10 +68,10 @@ COMMENT ON DATABASE ecommerce IS 'Base de datos principal del proyecto';
 GRANT CONNECT ON DATABASE ecommerce TO diego;
 
 -- Quitar permiso
-REVOKE CONNECT ON DATABASE ecommerce FROM deigo;
+REVOKE CONNECT ON DATABASE ecommerce FROM diego;
 ```
 
-* Saber a que base de datos estamos conectadados actualmente:
+* Saber a que base de datos estamos conectados actualmente:
 
 ```sql
 SELECT current_database();

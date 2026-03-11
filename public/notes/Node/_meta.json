@@ -18,5 +18,9 @@
   "auth": {
     "title": "Auth",
     "order": 5
+  },
+  "web-sockets": {
+    "title": "WebSockets",
+    "order": 6
   }
 }

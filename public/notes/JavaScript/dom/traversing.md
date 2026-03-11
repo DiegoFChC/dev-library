@@ -114,6 +114,27 @@ Selectores
 * `querySelector` Permite integrar selectores de css para buscar elementos en el DOM. Retorna el primer elemento que encuentre.
 * `querySelectorAll` Permite integrar selectores de css para buscar un conjunto de elementos en el DOM.
 
+### Usando selectores CSS
+Tenemos dos métodos útiles a la hora de buscar elementos en el DOM usando selectores _CSS_:
+
+* `catches` nos permite saber si un elmento cumple con un selector _CSS_. Retorna `true` si coincide y `false` si no.
+
+```javascript
+if (element.matches('.class-name')) {
+  // -> Code
+}
+
+if (element.matches('[data-name="info"]')) {
+  // -> code
+}
+```
+
+* `closest` permite buscar el ancestro más cercano a un elemento (incluyéndoce él mismo), el cual cumple con un selector _CSS_. Retorna el elemento encontrado o `null` de lo contrario.
+
+```javascript
+const card = btn.closest('.card')
+```
+
 ## NodeList vs HTMLCollection
 * **NodeList:** Contiene cualquier tipo de nodo.
   * Se puede recorrer con forEach.

@@ -1,7 +1,7 @@
 ---
 title: Eventos
 description: Que son los eventos en el DOM, que los puede generar y como detectarlos.
-oreder: 4
+order: 4
 ---
 
 ## ¿Que es un evento?
@@ -33,7 +33,7 @@ El mecanismo recomendado para registrar manejadores de eventos es usando el mét
   
 > Algunos eventos, como `click`, están disponibles prácticamente en cualquier elemento. Mientras que otros son más específicos y solo son útiles en ciertas situaciones.
 
-Veamos el sigueinte ejemplo donde podemos mostrar un mensaje en la ventana cada vez que el usuario da _click_ sobre un botón:
+Veamos el siguiente ejemplo donde podemos mostrar un mensaje en la ventana cada vez que el usuario da _click_ sobre un botón:
 
 ```javascript
 const button = document.querySelector('button')
@@ -47,10 +47,33 @@ En este caso el _detector_ es `click` y el _manejador_ es la `función` que mues
 
 > Podemos asignar más de un `eventListener` a un mismo elemento.
 
+Los manejadores no necesarimente deben estar definidos en el mismo _listener_, podemos definirlos aparte y luego asignarlos a nuestro _listener_. Esto nos abre la puerta al uso de `this`.
+
+```javascript
+const btn = document.querySelector('button')
+function myFunction (e) {
+  console.log(e.currentTarget.tagName) // -> BUTTON
+  console.log(this.tagName) // -> BUTTON
+}
+
+const otherFunction = (e) => {
+  console.log(e.currentTarget.tagName) // -> BUTTON
+  console.log(this.tagName) // -> undefined
+  console.log(this) // -> Contexto de la función contenedora
+}
+
+btn.addEventListener('click', myFunction)
+btn.addEventListener('click', otherFunction)
+```
+
+{% callout type="caution" %}
+El objeto `this` tiene un comportamiento diferente si se usa en una _arrow fucntion_ o en una declaración de `function` normal. Si llamamos `this` desde una función definida con `fuction`, este hará referencia al `currentTarget` o elemento que disparó el evento. Si llamamos `this` desde una función definida con _arrow function_ `() => {}`, ete hará referencia al contexto de la función que contiene a el elemento que disporó el evento (en este caso `window` será el contexto).
+{% /callout %}
+
 #### Otros métodos
 Podemos asignar manejadores de eventos a los elementos de otras formas, aunque la más recomendada sigue siendo `addEventListener`.
 
-Los **event handler properties** son propiedades que podemos asignar a algunos elementos directamente para que reaccionen a ciertos eventos. Ejemplo de esto son los `button`, a los cuales les podemos asignar ciertas propiedades como `onClick`, es igual a detectar el evento `click` pero sin usar `addEventListener()`:
+Los **event handler properties** son propiedades que podemos asignar a algunos elementos directamente para que reaccionen a ciertos eventos. Ejemplo de esto son los `button`, a los cuales les podemos asignar ciertas propiedades como `onclick`, es igual a detectar el evento `click` pero sin usar `addEventListener()`:
 
 ```javascript
 const myFunction = () => {
@@ -61,6 +84,8 @@ button.onclick = myFunction
 ```
 
 Algo a tener en cuenta es que a diferencia de `addEventListener`, este tipo de propiedades solo se pueden asignar una vez a un elemento, si se hace más de una, no se están añadiendo nuevos eventos, sino reemplazando el que se había asignado previamente.
+
+> Si queremos prevenir el comportamiento por defecto de un elemento, usando _event handler properties_, podemos hacer un `return false` al final de nuestra función (similar a hacer `e.preventDefault()`).
 
 Otra forma de asignar manejadores es por medio de los **manejadores de evento en línea**, los cuales permiten asignar código JavaScript directamente a los elementos html por medio de atributos, vemos el siguiente ejemplo:
 
@@ -203,12 +228,15 @@ body.addEventListener('click', (e) => {
   console.log(`Hiciste click sobre el elemento ${e.currentTarget.tagName}`)
 })
 div.addEventListener('click', (e) => {
+  e.stopPropagation()
   console.log(`Hiciste click sobre el elemento ${e.currentTarget.tagName}`)
 })
 span.addEventListener('click', (e) => {
+  e.stopPropagation()
   console.log(`Hiciste click sobre el elemento ${e.currentTarget.tagName}`)
 })
 button.addEventListener('click', (e) => {
+  e.stopPropagation()
   console.log(`Hiciste click sobre el elemento ${e.currentTarget.tagName}`)
 })
 ```
@@ -228,6 +256,8 @@ Ahora la salida esperada evitando **bubbling** sería:
 // Acción: Click sobre el button
 -> Hiciste click sobre el elemento BUTTON
 ```
+
+> Tenemos otro método llamado `stopInmediatePropagation()`, pero este evita que se agregen varios manejadores de eventos a un mismo elemento del DOM.
 
 ### Captura de eventos
 Una alternativa a la propagación de eventos es la **captura de eventos** o **event capture**. Lo que permite la _captura de eventos_ es invertir el orden en que los eventos se lanzan, con _bubbling_ los eventos son emitidos desde el `target` más anidado, pero con _event capture_ los eventos se emiten desde el `currentTarget`, osea el primer elemento padre, hasta llegar al `target` exacto donde se quería llegar.

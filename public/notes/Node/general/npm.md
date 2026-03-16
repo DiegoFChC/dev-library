@@ -1,7 +1,7 @@
 ---
 title: NPM
-description: NPM
-order: 4
+description: NPM (Node Package Manager)
+order: 3
 ---
 
 ## NPM

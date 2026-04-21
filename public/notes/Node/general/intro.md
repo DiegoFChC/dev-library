@@ -22,6 +22,12 @@ Para ejecutar un archivo `.js`.
 node fileName.js
 ```
 
+Si queremos ejecutar un proyecto de _Node JS_ y que se mantenga escuchando y además lea contenido de un archivo `.env` podemos usar:
+
+```bash
+node --env-file .env --watch fileName.js
+```
+
 ## Node JS vs Navegador
 
 Node permite interactuar con el sistema interactivo (os, process, etc), y JS en el navegador permite acceder a características únicas del navegador (document, window, etc).

@@ -185,7 +185,7 @@ Luego de creada la instancia del `FileHandle`, dependiendo de la _bandera_ selec
 fileHandle.write('new text')
 ```
 
-Para leer es tan sencillo como llamar al método `write`, pero no lo es para acciones que inician con lectura de archivos. Para lectura debenos hacer algunos pasos adicionales, ya que manualmente debemos crear el espacio de memoria que se usará para almacenar la información leida, y debe hacerce cuidadosamente para no ocupar espacio demás. Veamos el siguiente ejemplo:
+Para escribir es tan sencillo como llamar al método `write`, pero no lo es para acciones que inician con lectura de archivos. Para lectura debenos hacer algunos pasos adicionales, ya que manualmente debemos crear el espacio de memoria que se usará para almacenar la información leida, y debe hacerce cuidadosamente para no ocupar espacio demás. Veamos el siguiente ejemplo:
 
 ```javascript
 // Leyendo un file.txt
@@ -206,7 +206,7 @@ Como vemos, es un proceso más cuidadoso. Debemos saber cuanto espacio vamos a o
 Es sumamente **importante** que cada vez que terminemos una acción sea de lectura o escritura, **cerremos el evento** ya que si no lo hacemos puede quedar ocupando espacio en memoria y posteriormente causar problemas, e incluso detener el hilo de _Node JS_.
 
 ```javascript
-fileHandle.close()
+await fileHandle.close()
 ```
 
 > Puedes ver más a detalle la implementación de estos métodos de I/O en el [código fuente de Node JS (fs)](https://github.com/nodejs/node/blob/main/lib/fs.js)

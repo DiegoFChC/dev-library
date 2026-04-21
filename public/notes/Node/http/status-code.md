@@ -5,7 +5,7 @@ order: 2
 ---
 
 ## Status Code
-Un **status code** es un número que indica que sucedió con la `request`. Describe el resultado de la operación.
+Un **status code** es un número que indica que sucedió con la `request`. Describe el resultado de la operación (éxito, error, redireccion, etc).
 
 La forma de definir el **status code** es por medio del objeto `response`.
 

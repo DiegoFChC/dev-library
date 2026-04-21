@@ -34,8 +34,8 @@ Tamaño del body en bytes.
 
 Node lo usa para:
 
-* saber cuándo termina el stream
-* validar uploads
+* Saber cuándo termina el stream
+* Validar uploads
 
 #### Authorization
 

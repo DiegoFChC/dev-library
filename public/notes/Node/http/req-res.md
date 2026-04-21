@@ -10,7 +10,7 @@ Cuando usamos el módulo `http`, cada petición HTTP activa una función que rec
 * `request` lo que el cliente envía
 * `response` lo que el servidor responde
 
-> Estos objetos sóli viven durante esa request, si el cliente hace una nueva petición, los objetos `request` y `response` se vuelven a generar con los neuvos datos.
+> Estos objetos sólo viven durante esa request, si el cliente hace una nueva petición, los objetos `request` y `response` se vuelven a generar con los nuevos datos.
 
 ```javascript
 const http = require('node:http')
@@ -75,13 +75,13 @@ El orden recomendado a la hora de enviar respuestas al cliente es el siguiente:
 {% /callout %}
 
 ### Tipos de response
-Como `response` e sun **stream** de escritura, tenenmos flexibilidad sobre el formato o la forma en que enviamos los datos. Dependiendo de su contenido y el método de entrega podemos responder:
+Como `response` es un **stream** de escritura, tenemos flexibilidad sobre el formato o la forma en que enviamos los datos. Dependiendo de su contenido y el método de entrega podemos responder:
 
 1. Por el formato del contenido (MIME Types)
 
 * **Texto Plano:** text/plain (ej. mensajes sencillos o logs).
 * **HTML:** text/html (para servir páginas web completas).
-* **JSON:** application/json (el estándar para APIs; requiere transformar el objeto a string con JSON.stringify()).
+* **JSON:** application/json (el estándar para APIs; requiere transformar el objeto a string con `JSON.stringify()`).
 * **Archivos Binarios:** image/png, application/pdf, audio/mpeg, etc.. 
 
 2. Por el método de entrega (Estrategia)

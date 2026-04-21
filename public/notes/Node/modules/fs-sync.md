@@ -41,6 +41,14 @@ const text = fs.readFileSync('./file.txt', 'utf-8') // utf-8 convierte a texto
 console.log(text)
 ```
 
+* **existsSync**: Verifica existencia del archivo,
+
+```javascript
+const fs = require('node:fs')
+
+console.log(fs.existsSync('./file.txt')) // -> true or false
+```
+
 ## Métodos generales
 
 A continaución se enumeran algunos métodos generales que tenemos en el _file system_. Estos métodos se definirán de forma general y pueden ser usados en _FS Sync_ o _FS Async_ (usando la función correcta).

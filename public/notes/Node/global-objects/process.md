@@ -5,7 +5,7 @@ order: 1
 ---
 
 ## Global Object process
-Objeto global que proporciona informacion y control sobre el proceso actual de ejecución. Propiedades y métodos que nos permiten interactuar con el entorno de ejecución de Nose JS.
+Objeto global que proporciona informacion y control sobre el proceso actual de ejecución. Propiedades y métodos que nos permiten interactuar con el entorno de ejecución de Node JS.
 
 * **argv**: Nos permite acceder a los argumentos de un comando.
 

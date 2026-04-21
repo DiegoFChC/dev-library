@@ -98,10 +98,27 @@ import { user, bike } from './modules/myModule.mjs'
 console.log(user, bike)
 ```
 
+{% callout type="danger" %}
+Cuando usamos ES Modules perdemos acceso directo a variables globales como: `__dirname`, `__filename`, `module`, `exports`, etc.
+{% /callout %}
+
+### Configuración
+Configuramos esto en el `package.json`. Si aún no tienes un `package.json`, lo puedes crear facilmente con valores por defecto:
+
+```bash
+npm init -y
+```
+
+Luego modificamos (o añadimos) la propiedad `type`:
+
+```javascript
+"type": "module",
+```
+
 ### Otras consideraciones
 
 Según la extensión que tengan nuestros archivos, podemos obligar a que se use uno u otro método.
 
 * **.js**: Por defecto usar CommonJS
 * **.mjs**: Obliga a usar ES Module
-* **.cjs**: Obliga  ausar CommonJS
+* **.cjs**: Obliga a usar CommonJS

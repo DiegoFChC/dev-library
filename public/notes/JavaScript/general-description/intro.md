@@ -1,52 +1,19 @@
 ---
 title: JavaScript
-description: Este es un ejemplo de com usar esta plantilla de documentación.
+description: ¿Que es JavaScript?
 order: 1
 ---
 
-## TypeScript
-Lenguage de programación de código abierto realizado por Microsoft para extender JavaScript. Permite incluir **tipado estricto** en JS. Permite tipar las aplicaciones JS, dando más herramientas y robustés.
-El tipado permite evitar errores y además clarifica la estrucutra de nuestro código, al identificar los tipos de variables, funciones y demás.
+## JavaScipt
 
-TypeScript se ejecuta sobre Node JS, por lo que es necesario instalarlo.
+**JavaScript** es un lenguaje de programación usado generalmente para la creación de páginas web interactivas y dinámicas. Por lo general se usa en el lado del _cliente_ por medio de los navegadores, pero actualmente también se usa en el lado del _servidor_ mediante entornos de ejecución como [Node.js](https://dev-library-diferdev.vercel.app/notes/Node/general/intro).
 
-```javascript
-const a = function() {
-  return math.random()
-}
-```
+JavaScript permite manipular el contenido de las páginas web a través del [DOM](https://dev-library-diferdev.vercel.app/notes/JavaScript/dom/dom), manejar eventos, realizar peticiones _http_, etc.
 
-```jsx
-function Button(props) {
-  let { children } = props;
+JavaScript es un lenguaje de **tipado débil**, lo que significa que no requiere definir los tipos de las variables. Este comportamiento permite, en una misma variable, almacenar distintos tipos de datos (lo que algunas veces puede ocacionar errores accidentales).
 
-  return <button>{children}</button>;
-}
-```
+## ECMAScript
 
-```jsx
-import { Tag } from '@markdoc/markdoc';
-import type { MarkdocNextJsSchema } from '@markdoc/next.js';
+[ECMAScript](https://ecma-international.org/) es el _standard_ y las reglas que determinan cómo debe funcionar JavaScript. _ECMAScript_ dicta como debe ser el lenguaje, sintaxis, tipos de datos, objetos, funciones, etc.
 
-import { Fence } from '@/components/fence';
-
-const markdoc: MarkdocNextJsSchema = {
-  render: Fence,
-  attributes: {},
-  transform(node, config) {
-    const attributes = node.transformAttributes(config);
-    const { content, language } = node.children[0].attributes;
-
-    return new Tag(
-      this.render as string,
-      {
-        ...attributes,
-        language,
-      },
-      [content]
-    );
-  },
-};
-
-export default markdoc;
-```
+> **JavaScript** es el lenguaje que implementa las reglas de **ECMAScript**, que luego se ejecutarán en los navegadores.

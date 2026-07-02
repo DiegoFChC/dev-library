@@ -3,12 +3,12 @@
     "order": 1,
     "title": "Descripción general"
   },
-  "dom": {
-    "order": 3,
-    "title": "DOM"
+  "fundamentals": {
+    "order": 2,
+    "title": "Fundamentos"
   },
-  "program-structure": {
-    "order": 4,
-    "title": "Estructura del programa"
+  "dom": {
+    "order": 10,
+    "title": "DOM"
   }
 }

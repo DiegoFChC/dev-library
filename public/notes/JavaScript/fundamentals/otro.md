@@ -1,7 +1,7 @@
 ---
-title: Estructura
-description: Estructuras
-order: 1
+title: Otro
+description: Valores, tipos y operadores comunmente usados en JavaScript.
+order: 10
 ---
 
 ## Variables

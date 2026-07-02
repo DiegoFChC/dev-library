@@ -4,13 +4,13 @@ descriptoon: Uso de PostgreSQL a través de la consola
 order: 2
 ---
 
-# PostgreSQL a través de la consola
+## PostgreSQL a través de la consola
 
 Para acceder a nuestras bases de datos `PostgreSQL` tenemos varias opciones, podemos usar pgAdmin o como está descrito en este documento, la consola. A continuación describiremos algunos de los comandos más importantes que podemos usar a través de la consola.
 
 > Recuerda tener instalado PostgreSQL en tu sistema, ya que usaremos el comando `psql` en la consola para acceder a nuestas bases de datos.
 
-## Accediendo
+### Accediendo
 
 Para ejecutar el gestor de bases de datos de `PostgreSQL` debemos abrir una consola y luego ejecutar el siguiente comando:
 
@@ -30,12 +30,14 @@ psql -p 5432 postgres postgres
 
 > Recuerta tener tu **contraseña** a la hora de acceder.
 
-## Algunos comandos importantes
+### Algunos comandos importantes
 
 A continuación se listan los comandos más importantes para usar en el bash de psql.
 
-> **BD** Base de datos
-> **<descripción>** Se refiere a colocar el dato solicitado pero sin necesidad de poner `<>`, ej: `\c database-name`
+{% callout %}
+* **BD** Base de datos
+* **<descripción>** Se refiere a colocar el dato solicitado pero sin necesidad de poner `<>`, ej: `\c database-name`
+{% /callout %}
 
 Comandos de navegación y consulta de información:
 
